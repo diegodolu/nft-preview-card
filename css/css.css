@@ -1,0 +1,108 @@
+:root {
+    /* ------- Primary colors --------*/
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* ---------- Neutral -----------*/
+    --veryDarkBlue-mainBG: hsl(217, 54%, 11%);
+    --veryDarkBlue-CardBG: hsl(216, 50%, 16%);
+    --veryDarkBlue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* ----- Fuente -----*/
+    --fuente: 'Outfit', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    background-color: var(--veryDarkBlue-mainBG);
+    width: auto;
+}
+.attribution {
+    text-align: center;
+}
+.card {
+    width: 30rem;
+    height: 52rem;
+    background-color: var(--veryDarkBlue-CardBG);
+    border-radius: 8px;
+    padding: 2rem;
+    font-family: var(--fuente);
+    -webkit-box-shadow: 0px 14px 19px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 14px 19px 0px rgba(0,0,0,0.38);
+    box-shadow: 0px 14px 19px 0px rgba(0,0,0,0.38);
+
+}
+.card__image {
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 55%;
+    width: auto;
+    border-radius: 8px;
+}
+.card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 1px solid var(--veryDarkBlue-line);
+    padding: 2rem 0;
+    font-weight: 300;
+}
+.card__description-title {
+    color: var(--white);
+}
+.card__description-char {
+    color: var(--softBlue);
+    font-size: 1.6rem;
+}
+.card__description-quantity {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+.ethereum {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--cyan);
+    font-weight: 600;
+}
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--softBlue);
+}
+.card__author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.card img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    height: 3rem;
+}
+.card__author p {
+    font-size: 1.4rem;
+    color: var(--softBlue);
+}
+.card__author p span {
+    color: var(--white);
+}
